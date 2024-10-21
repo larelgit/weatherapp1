@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="WeatherAppController">
+
+    <top>
+        <VBox>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <padding>
+                    <Insets top="20" right="20" bottom="10" left="20"/>
+                </padding>
+                <Label text="City:"/>
+                <ComboBox fx:id="cityComboBox" prefWidth="270"/> <!-- Increased prefWidth -->
+                <Button text="Get Weather" onAction="#fetchWeather" fx:id="fetchButton"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="15" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Location Button Centered -->
+            <Button fx:id="locationButton" onAction="#fetchCurrentLocationWeather">
+                <tooltip>
+                    <Tooltip text="Get Current Location"/>
+                </tooltip>
+                <graphic>
+                    <ImageView fitWidth="40" fitHeight="40" smooth="true" mouseTransparent="true">
+                        <image>
+                            <Image url="@location_icon.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Label fx:id="statusLabel" text="Select or enter a city name and click 'Get Weather'."/>
+            <ProgressIndicator fx:id="progressIndicator" visible="false"/>
+            <Label fx:id="temperatureLabel" text="" styleClass="temperature-label"/>
+            <Label fx:id="descriptionLabel" text="" styleClass="description-label"/>
+            <Label fx:id="humidityLabel" text="" styleClass="humidity-label"/>
+        </VBox>
+    </center>
+
+</BorderPane>

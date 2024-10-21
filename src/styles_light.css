@@ -1,0 +1,121 @@
+/* Minimalistic and modern styling - Light Theme */
+
+.root {
+    -fx-background-color: #FFFFFF;
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -fx-font-smoothing-type: gray; /* Better cross-platform compatibility */
+}
+
+/* Button Styling */
+.button {
+    -fx-background-color: #4285F4;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8 16;
+    -fx-background-radius: 4;
+    -fx-border-color: transparent;
+}
+
+.button:hover {
+    -fx-background-color: #3367D6;
+}
+
+/* Location Button Styling */
+#locationButton {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-cursor: hand; /* Change cursor to hand */
+    -fx-border-color: #4285F4; /* Blue outline */
+    -fx-border-width: 2;
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%; /* Ensures background respects circular shape */
+    -fx-min-width: 50px; /* Ensure button is large enough */
+    -fx-min-height: 50px;
+    -fx-max-width: 50px;
+    -fx-max-height: 50px;
+    -fx-transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+#locationButton:hover {
+    -fx-background-color: #EEEEEE; /* Light grey fill on hover */
+    /* Border remains the same */
+}
+
+/* ComboBox Styling */
+.combo-box, .combo-box-base {
+    -fx-font-size: 14px;
+    -fx-padding: 8;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CCCCCC;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-font-smoothing-type: gray; /* Ensure font smoothing for ComboBox text */
+}
+
+.combo-box:hover, .combo-box:focused, .combo-box-base:hover, .combo-box-base:focused {
+    -fx-border-color: #4285F4;
+}
+
+/* Style the ComboBox Arrow */
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-alignment: CENTER_RIGHT; /* Ensure arrow is aligned to the right */
+    -fx-pref-width: 40px; /* Adjusted preferred width from 40px to 35px */
+}
+
+.combo-box .arrow-button .arrow {
+    -fx-background-color: #333333; /* Dark arrow color */
+    /* Do not define -fx-shape to use default arrow */
+    -fx-translate-x: 4px; /* Move arrow 5px to the left */
+}
+
+.combo-box .arrow-button:hover .arrow {
+    -fx-background-color: #555555; /* Darker arrow on hover */
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #FFFFFF;
+    -fx-control-inner-background: #FFFFFF;
+}
+
+.combo-box-popup .list-cell {
+    -fx-text-fill: -fx-text-inner-color;
+    -fx-font-size: 14px;
+    -fx-font-smoothing-type: gray; /* Ensure font smoothing for list items */
+}
+
+/* Label Styling */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-font-smoothing-type: gray; /* Ensure labels have font smoothing */
+}
+
+.temperature-label {
+    -fx-font-size: 48px;
+    -fx-text-fill: #333333;
+    -fx-font-smoothing-type: gray;
+}
+
+.description-label {
+    -fx-font-size: 24px;
+    -fx-text-fill: #555555;
+    -fx-font-smoothing-type: gray;
+}
+
+.humidity-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #777777;
+    -fx-font-smoothing-type: gray;
+}
+
+/* Progress Indicator Styling */
+.progress-indicator {
+    -fx-progress-color: #4285F4;
+}
+
+/* Ensure images are smooth */
+.image-view {
+    -fx-smooth: true;
+}
